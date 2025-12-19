@@ -1,11 +1,24 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ShieldCheck, Lock } from "lucide-react";
+import { ShieldCheck, Lock, MousePointerClick } from "lucide-react";
 
 export default function PurchaseSection() {
   return (
-    <section className="w-full py-20 bg-black text-white overflow-hidden relative">
+    <>
+      <style>{`
+        .purchase-button {
+          padding: 32px 0;
+          font-size: 22px;
+        }
+        @media (min-width: 768px) {
+          .purchase-button {
+            padding: 48px 0;
+            font-size: 36px;
+          }
+        }
+      `}</style>
+      <section className="w-full py-20 bg-black text-white overflow-hidden relative">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -57,7 +70,7 @@ export default function PurchaseSection() {
                   href="https://pay.kiwify.com.br/3BAj3Jp?afid=Hvig5Lsq"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative block w-full bg-gradient-to-r from-black to-[#2D8A71] text-white text-2xl md:text-4xl font-black py-8 md:py-12 rounded-full uppercase tracking-wide text-center overflow-hidden group"
+                  className="relative block w-full bg-gradient-to-r from-black to-[#2D8A71] text-white font-black rounded-full uppercase tracking-wide text-center overflow-hidden group purchase-button"
                   whileHover={{ 
                     scale: 1.05,
                     boxShadow: "0 0 70px rgba(45,138,113,1)"
@@ -117,7 +130,10 @@ export default function PurchaseSection() {
                     }}
                   />
                   
-                  <span className="relative z-10">SIM, QUERO O CÓDIGO!</span>
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    SIM, QUERO O CÓDIGO!
+                    <MousePointerClick className="w-6 h-6 md:w-7 md:h-7" />
+                  </span>
                 </motion.a>
                 
                 <div className="flex flex-col items-center mt-4 gap-1 text-[25px] font-bold tracking-wider text-gray-300">
@@ -188,5 +204,6 @@ export default function PurchaseSection() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

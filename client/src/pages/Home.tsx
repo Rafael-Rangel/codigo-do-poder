@@ -19,6 +19,7 @@ export default function Home() {
         image="/images/livro_01_impenetravel.png"
         buttonVariant="light"
         gradientType="left"
+        iconType="shieldCheck"
       />
 
       <ContentSection 
@@ -29,6 +30,7 @@ export default function Home() {
         highlight
         buttonVariant="dark"
         gradientType="right"
+        iconType="heartHandshake"
       />
 
       <ContentSection 
@@ -38,6 +40,7 @@ export default function Home() {
         image="/images/livro_02_hackeando.png"
         buttonVariant="light"
         gradientType="circular"
+        iconType="brain"
       />
 
       <ContentSection 
@@ -49,6 +52,7 @@ export default function Home() {
         highlight
         buttonVariant="dark"
         gradientType="left"
+        iconType="bookHeart"
       />
 
       <ContentSection 
@@ -58,6 +62,7 @@ export default function Home() {
         image="/images/livro_04_conflito_interno.png"
         buttonVariant="light"
         gradientType="right"
+        iconType="target"
       />
 
       <ContentSection 
@@ -69,6 +74,7 @@ export default function Home() {
         highlight
         buttonVariant="dark"
         gradientType="circular"
+        iconType="trendingUp"
       />
 
       <ContentSection 
@@ -78,6 +84,7 @@ export default function Home() {
         image="/images/livro_06_solitude.png"
         buttonVariant="light"
         gradientType="left"
+        iconType="gem"
       />
 
       <ContentSection 
@@ -89,6 +96,7 @@ export default function Home() {
         highlight
         buttonVariant="dark"
         gradientType="right"
+        iconType="crown"
       />
 
       <PurchaseSection />

@@ -1,8 +1,21 @@
 import { motion } from "framer-motion";
+import { BicepsFlexed } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white">
+    <>
+      <style>{`
+        .hero-button {
+          padding: 16px 40px;
+          font-size: 16px;
+        }
+        @media (min-width: 768px) {
+          .hero-button {
+            font-size: 20px;
+          }
+        }
+      `}</style>
+      <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -41,7 +54,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-base md:text-lg lg:text-xl max-w-3xl text-gray-300 font-light tracking-wide uppercase"
         >
-          Dominar a inteligência emocional, ter uma mente blindada, vencer seus conflitos internos, dominar o autoconhecimento, dominar seus relacionamentos, aprender a arte da solitude, ter valor e nunca mais sofrer por ninguém.
+          Dominar a inteligência emocional, fortalecer a mente, vencer conflitos internos, elevar o autoconhecimento, melhorar relacionamentos, aprender a solitude e nunca mais sofrer por ninguém.
         </motion.p>
 
         <motion.div 
@@ -65,7 +78,11 @@ export default function HeroSection() {
             href="https://pay.kiwify.com.br/3BAj3Jp?afid=Hvig5Lsq"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block bg-gradient-to-r from-black to-[#2D8A71] text-white text-lg md:text-xl px-10 py-4 rounded-full font-bold uppercase tracking-widest overflow-hidden group"
+            className="relative inline-block bg-gradient-to-r from-black to-[#2D8A71] text-white rounded-full font-bold uppercase tracking-widest overflow-hidden group hero-button"
+            style={{
+              padding: '16px 40px',
+              fontSize: '16px'
+            }}
             whileHover={{ 
               scale: 1.08,
               boxShadow: "0 0 40px rgba(45,138,113,0.8)"
@@ -108,7 +125,10 @@ export default function HeroSection() {
               }}
             />
             
-            <span className="relative z-10">Quero o Código do Poder!</span>
+            <span className="relative z-10 flex items-center gap-2">
+              Quero o Código do Poder!
+              <BicepsFlexed className="w-5 h-5" />
+            </span>
           </motion.a>
         </motion.div>
       </div>
@@ -116,5 +136,6 @@ export default function HeroSection() {
       {/* Bottom Fade */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10" />
     </section>
+    </>
   );
 }

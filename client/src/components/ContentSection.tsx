@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Zap, Sparkles, Star, Rocket, Crown, Flame, Target, TrendingUp, Shield, ShieldCheck, Brain, Heart, HeartHandshake, Gem, Award, Trophy, BookHeart } from "lucide-react";
 
 interface ContentSectionProps {
   title: string;
@@ -12,6 +13,7 @@ interface ContentSectionProps {
   showCta?: boolean;
   buttonVariant?: "dark" | "light";
   gradientType?: "left" | "right" | "circular";
+  iconType?: "arrow" | "zap" | "sparkles" | "star" | "rocket" | "crown" | "flame" | "target" | "trendingUp" | "shield" | "shieldCheck" | "brain" | "heart" | "heartHandshake" | "gem" | "award" | "trophy" | "bookHeart";
 }
 
 export default function ContentSection({ 
@@ -23,8 +25,32 @@ export default function ContentSection({
   highlight, 
   showCta = true,
   buttonVariant = "dark",
-  gradientType = "left"
+  gradientType = "left",
+  iconType = "arrow"
 }: ContentSectionProps) {
+  
+  const iconMap = {
+    arrow: ArrowRight,
+    zap: Zap,
+    sparkles: Sparkles,
+    star: Star,
+    rocket: Rocket,
+    crown: Crown,
+    flame: Flame,
+    target: Target,
+    trendingUp: TrendingUp,
+    shield: Shield,
+    shieldCheck: ShieldCheck,
+    brain: Brain,
+    heart: Heart,
+    heartHandshake: HeartHandshake,
+    gem: Gem,
+    award: Award,
+    trophy: Trophy,
+    bookHeart: BookHeart
+  };
+  
+  const Icon = iconMap[iconType];
   
   const buttonStyles = {
     dark: "bg-gradient-to-r from-black to-[#2D8A71] hover:from-black hover:to-[#236e5a] text-white shadow-[0_0_20px_rgba(45,138,113,0.3)] hover:shadow-[0_0_30px_rgba(45,138,113,0.6)]",
@@ -38,10 +64,17 @@ export default function ContentSection({
   };
 
   return (
-    <section className={cn(
-      "w-full py-16 md:py-24 overflow-hidden relative",
-      "bg-black"
-    )}>
+    <>
+      <style>{`
+        .content-button {
+          padding: 24px 32px;
+          font-size: 18px;
+        }
+      `}</style>
+      <section className={cn(
+        "w-full py-16 md:py-24 overflow-hidden relative",
+        "bg-black"
+      )}>
       {/* Background Gradient */}
       <div 
         className="absolute inset-0 pointer-events-none"
@@ -85,9 +118,13 @@ export default function ContentSection({
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "relative inline-block text-lg px-8 py-6 rounded-full uppercase tracking-widest font-bold text-center overflow-hidden group",
+                    "relative inline-block rounded-full uppercase tracking-widest font-bold text-center overflow-hidden group content-button",
                     buttonStyles[buttonVariant]
                   )}
+                  style={{
+                    padding: '24px 32px',
+                    fontSize: '18px'
+                  }}
                   whileHover={{ 
                     scale: 1.05,
                     boxShadow: buttonVariant === "dark" 
@@ -132,7 +169,10 @@ export default function ContentSection({
                     }}
                   />
                   
-                  <span className="relative z-10">Quero o Código do Poder!</span>
+                  <span className="relative z-10 flex items-center gap-2">
+                    Quero o Código do Poder!
+                    <Icon className="w-5 h-5" />
+                  </span>
                 </motion.a>
               </motion.div>
             )}
@@ -168,5 +208,6 @@ export default function ContentSection({
         </div>
       </div>
     </section>
+    </>
   );
 }
