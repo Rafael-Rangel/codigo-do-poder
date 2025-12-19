@@ -83,7 +83,7 @@ export default function BookGallery() {
   const duplicatedBooks = [...books, ...books, ...books];
 
   return (
-    <section className="w-full py-12 bg-black text-white overflow-hidden">
+    <section className="w-full py-12 bg-black text-white overflow-hidden" style={{ marginTop: '-72px', marginBottom: '-20px' }}>
       <div className="w-full px-4 md:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0 }}

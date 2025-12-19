@@ -59,7 +59,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-8"
+          className="mt-8 mb-[150px]"
         >
           <motion.a 
             href="https://pay.kiwify.com.br/3BAj3Jp?afid=Hvig5Lsq"
