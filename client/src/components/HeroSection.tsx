@@ -65,7 +65,7 @@ export default function HeroSection() {
             href="https://pay.kiwify.com.br/3BAj3Jp?afid=Hvig5Lsq"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block bg-gradient-to-r from-black to-[#2D8A71] text-white text-lg md:text-xl px-10 py-4 rounded-full font-bold uppercase tracking-widest border border-white/10 overflow-hidden group"
+            className="relative inline-block bg-gradient-to-r from-black to-[#2D8A71] text-white text-lg md:text-xl px-10 py-4 rounded-full font-bold uppercase tracking-widest overflow-hidden group"
             whileHover={{ 
               scale: 1.08,
               boxShadow: "0 0 40px rgba(45,138,113,0.8)"

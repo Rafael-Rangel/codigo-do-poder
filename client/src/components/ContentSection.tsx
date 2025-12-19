@@ -11,6 +11,7 @@ interface ContentSectionProps {
   highlight?: boolean;
   showCta?: boolean;
   buttonVariant?: "dark" | "light";
+  gradientType?: "left" | "right" | "circular";
 }
 
 export default function ContentSection({ 
@@ -21,20 +22,32 @@ export default function ContentSection({
   reverse, 
   highlight, 
   showCta = true,
-  buttonVariant = "dark"
+  buttonVariant = "dark",
+  gradientType = "left"
 }: ContentSectionProps) {
   
   const buttonStyles = {
-    dark: "bg-gradient-to-r from-black to-[#2D8A71] hover:from-black hover:to-[#236e5a] text-white shadow-[0_0_20px_rgba(45,138,113,0.3)] hover:shadow-[0_0_30px_rgba(45,138,113,0.6)] border border-white/10",
-    light: "bg-gradient-to-r from-[#00C4B4] to-[#008F82] hover:from-[#00E0CE] hover:to-[#00A899] text-white shadow-[0_0_20px_rgba(0,196,180,0.4)] hover:shadow-[0_0_30px_rgba(0,196,180,0.7)] border border-white/20"
+    dark: "bg-gradient-to-r from-black to-[#2D8A71] hover:from-black hover:to-[#236e5a] text-white shadow-[0_0_20px_rgba(45,138,113,0.3)] hover:shadow-[0_0_30px_rgba(45,138,113,0.6)]",
+    light: "bg-gradient-to-r from-[#00C4B4] to-[#008F82] hover:from-[#00E0CE] hover:to-[#00A899] text-white shadow-[0_0_20px_rgba(0,196,180,0.4)] hover:shadow-[0_0_30px_rgba(0,196,180,0.7)]"
+  };
+
+  const gradientStyles = {
+    left: { background: "linear-gradient(to right, rgba(255,255,255,0.05) 0%, transparent 50%)" },
+    right: { background: "linear-gradient(to left, rgba(255,255,255,0.05) 0%, transparent 50%)" },
+    circular: { background: "radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%)" }
   };
 
   return (
     <section className={cn(
-      "w-full py-16 md:py-24 overflow-hidden",
+      "w-full py-16 md:py-24 overflow-hidden relative",
       "bg-black"
     )}>
-      <div className="w-full px-4 md:px-8 lg:px-12">
+      {/* Background Gradient */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={gradientStyles[gradientType]}
+      />
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
         <div className={cn(
           "flex flex-col gap-12 items-center max-w-7xl mx-auto",
           reverse ? "md:flex-row-reverse" : "md:flex-row"

@@ -18,6 +18,7 @@ export default function Home() {
         text="Essa coleção reúne os textos mais transformadores e inovadores já criados, projetados para levar você ao próximo nível no desenvolvimento pessoal. Descubra como dominar qualquer situação, fortalecer sua confiança e alcançar o sucesso que sempre esteve ao seu alcance. Está pronto para desvendar os segredos que irão transformar sua vida para sempre?"
         image="/images/livro_01_impenetravel.png"
         buttonVariant="light"
+        gradientType="left"
       />
 
       <ContentSection 
@@ -27,6 +28,7 @@ export default function Home() {
         reverse
         highlight
         buttonVariant="dark"
+        gradientType="right"
       />
 
       <ContentSection 
@@ -35,6 +37,7 @@ export default function Home() {
         text="As oportunidades são diariamente perdidas por você, e o fator principal é apenas a sua mente. Indiretamente ela te induz a cometer erros drásticos, te causando transtornos de ANSIEDADE, MEDOS e ANGÚSTIAS. Mas a partir de agora, a sua vida irá mudar completamente, você irá literalmente HACKEAR a sua mente."
         image="/images/livro_02_hackeando.png"
         buttonVariant="light"
+        gradientType="circular"
       />
 
       <ContentSection 
@@ -45,6 +48,7 @@ export default function Home() {
         reverse
         highlight
         buttonVariant="dark"
+        gradientType="left"
       />
 
       <ContentSection 
@@ -53,6 +57,7 @@ export default function Home() {
         text="Você sabia que é possível usar tudo que está ao seu redor como combustível para você sempre se favorecer? E se você tivesse o poder de dominar a sua própria mente? Talvez você nunca tenha tido essa experiência ou não sabe como isso é libertador."
         image="/images/livro_04_conflito_interno.png"
         buttonVariant="light"
+        gradientType="right"
       />
 
       <ContentSection 
@@ -63,14 +68,16 @@ export default function Home() {
         reverse
         highlight
         buttonVariant="dark"
+        gradientType="circular"
       />
 
       <ContentSection 
-        title="Dominando um Relacionamento"
-        subtitle="Nunca mais sofra"
-        text="Se você entrou em um relacionamento e com o passar do tempo viu que aquela pessoa não era sua tão sonhada alma gêmea, VOCÊ ESTÁ ENGANADO. Apenas entrou no quarto passo do relacionamento e não soube lidar com isso. Sem essa coleção, você nunca vai passar por ele."
-        image="/images/book_05.png"
+        title="A Arte da Solitude"
+        subtitle="Aprenda a estar sozinho"
+        text="A solitude não é solidão. É o poder de estar completamente bem consigo mesmo, sem depender de ninguém para ser feliz. Descubra como transformar momentos sozinho em oportunidades de crescimento, autoconhecimento e fortalecimento interior. Domine a arte de estar em paz com sua própria companhia e torne-se verdadeiramente independente emocionalmente."
+        image="/images/livro_06_solitude.png"
         buttonVariant="light"
+        gradientType="left"
       />
 
       <ContentSection 
@@ -81,6 +88,7 @@ export default function Home() {
         reverse
         highlight
         buttonVariant="dark"
+        gradientType="right"
       />
 
       <PurchaseSection />

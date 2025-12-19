@@ -111,27 +111,26 @@ export default function BookGallery() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <Card className="bg-transparent border-none shadow-none">
-                      <CardContent className="flex aspect-[2/3] items-center justify-center p-0 overflow-hidden rounded-lg group relative cursor-pointer">
+                      <CardContent className="flex aspect-[2/3] items-center justify-center p-0 overflow-hidden rounded-lg group relative cursor-pointer [&::before]:hidden [&::after]:hidden">
                         <motion.img 
                           src={book.image} 
                           alt={book.title} 
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover brightness-100 contrast-100"
+                          style={{ 
+                            filter: 'brightness(1) contrast(1)',
+                            backgroundImage: 'none',
+                            background: 'none'
+                          }}
                           whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.4, ease: "easeOut" }}
                         />
                         <motion.div 
-                          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-black/0"
-                          initial={{ opacity: 0 }}
-                          whileHover={{ opacity: 1 }}
-                          transition={{ duration: 0.3 }}
-                        />
-                        <motion.div 
-                          className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-lg"
+                          className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-lg pointer-events-none"
                           whileHover={{ borderColor: "rgba(0, 196, 180, 0.5)" }}
                           transition={{ duration: 0.3 }}
                         />
                         <motion.div 
-                          className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+                          className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-black/60 rounded-b-lg"
                         >
                           <p className="text-white text-sm font-bold uppercase tracking-wider text-center">
                             {book.title}
