@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ShieldCheck, Lock, MousePointerClick } from "lucide-react";
+import { ShieldCheck, Lock, MousePointer2 } from "lucide-react";
 
 export default function PurchaseSection() {
   return (
@@ -132,7 +132,7 @@ export default function PurchaseSection() {
                   
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     SIM, QUERO O CÓDIGO!
-                    <MousePointerClick className="w-6 h-6 md:w-7 md:h-7" />
+                    <MousePointer2 className="w-6 h-6 md:w-7 md:h-7" />
                   </span>
                 </motion.a>
                 
