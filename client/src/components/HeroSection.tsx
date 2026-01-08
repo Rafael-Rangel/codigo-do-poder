@@ -6,7 +6,7 @@ export default function HeroSection() {
     <>
       <style>{`
         .hero-button {
-          padding: 16px 40px;
+          padding: 16px 20px;
           font-size: 16px;
         }
         @media (min-width: 768px) {
